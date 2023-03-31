@@ -1,6 +1,6 @@
 Name:		texlive-ufrgscca
 Version:	64314
-Release:	1
+Release:	2
 Summary:	A bundle for undergraduate students final work/report (tcc) at UFRGS/EE
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ufrgscca
