@@ -1,5 +1,5 @@
 Name:		texlive-ufrgscca
-Version:	70161
+Version:	71033
 Release:	1
 Summary:	A bundle for undergraduate students final work/report (tcc) at UFRGS/EE
 Group:		Publishing
