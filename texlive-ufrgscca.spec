@@ -3,7 +3,7 @@ Version:	71033
 Release:	1
 Summary:	A bundle for undergraduate students final work/report (tcc) at UFRGS/EE
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ufrgscca
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ufrgscca
 License:	lppl1.3c gpl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.doc.r%{version}.tar.xz
