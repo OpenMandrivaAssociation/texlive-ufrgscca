@@ -1,40 +1,24 @@
-Name:		texlive-ufrgscca
-Version:	72586
-Release:	1
+%global tl_name ufrgscca
+%global tl_revision 79593
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.13a
+Release:	%{tl_revision}.1
 Summary:	A bundle for undergraduate students final work/report (tcc) at UFRGS/EE
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ufrgscca
-License:	lppl1.3c gpl
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.doc.r%{version}.tar.xz
+License:	lppl1.3c agpl3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ufrgscca.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This bundled is aimed at producing undergraduate students'
-final work/report at UFRGS/EE (Engineering School at the
-Federal University of Rio Grande do Sul), closely following
-ABNT rules (Brazilian Association for Technical Norms). It is
-composed of a main class, ufrgscca, and a set of auxiliary
-packages, some of which can be used independently.
+This bundle is aimed at producing undergraduate students' final
+work/report at UFRGS/EE (Engineering School at the Federal University of
+Rio Grande do Sul), closely following ABNT rules (Brazilian Association
+for Technical Norms). It is composed of a main class, ufrgscca, and a
+set of auxiliary packages, some of which can be used independently.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/ufrgscca
-%doc %{_texmfdistdir}/doc/latex/ufrgscca
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
